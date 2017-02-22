@@ -1,0 +1,35 @@
+﻿@using ItemApplication.Models
+@model ItemViewModel
+@{
+    ViewBag.Title = "Index";
+}
+<br/>
+<div style="display:flex;margin-bottom:20px;margin-top:15px;">
+    <div class="ItemCategory">
+       <span style="color:black">Item SubCategory: </span> <span> @Html.DropDownList("Item Sub Category", new SelectList(Model.ItemSubCategory),"Select SubCategory")</span>
+    </div>
+    <div style="margin-left:600px;">
+        Items # of total # here Please!
+    </div>
+</div>
+<div>
+    <img src="~/Images/2 KH Casbah Sectional.jpg" style="height:400px;width:100%;margin-bottom:30px;"/>
+</div>
+<p>
+    If a single piece of furniture has the ability to define the style of a personal living space, that piece would be the sofa. Available in a range of styles -- with a variety of functions -- a sofa can be functional or whimsical, period or contemporary, single or sectional. In each instance the sofa, as a signature object, defines the space in which it sits.
+</p>
+
+<br/>
+<br/>
+
+<div style="margin-left:300px;">
+    <textarea style="width: 400px;height: 90px;" id="textarea"></textarea>
+    <br/>
+    <div>Please enter your comment on the item</div>
+</div>
+@section ItemCategory{
+    <div class="ItemCategory" style="color:white">
+        <span style="color:white">Item Category: </span> <span> @Html.DropDownList("Item Category", new SelectList(Model.ItemCategory),"Select Category")</span>
+    </div>
+}
+<link href="~/Content/Item.css" rel="stylesheet" />

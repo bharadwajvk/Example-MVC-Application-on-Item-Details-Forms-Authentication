@@ -1,0 +1,27 @@
+﻿
+@{
+    ViewBag.Title = "Login";
+
+}
+
+
+<div style="margin-left: 200px;margin-top: 100px;border: 1px solid black;width: 300px;height: 150px;">
+    @using (Html.BeginForm("LoginSubmit", "Item"))
+    {
+        <div style="padding-left:15px;">
+            <div> Login Details </div>
+            <br/>
+            @Html.Label("User Name")
+            @Html.TextBox("UserName")
+
+            @Html.Label("Password")
+            <span style="margin-left:6px;">
+                @Html.TextBox("Password")
+            </span>
+            <br />
+            <br/>
+            <input type="submit" value="Login" />
+        </div>
+    }
+</div>
+
